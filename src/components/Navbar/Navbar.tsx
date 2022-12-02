@@ -8,24 +8,24 @@ const Navbar = () => {
         <div className="container-fluid">
           <span className="navbar-brand">My blog</span>
           <div className="collapse navbar-collapse">
-            <ul className="navbar-nav mr-auto" style={{float: 'right'}}>
+            <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <NavLink to='/' className="nav-link">
-                  Home |
+                  Home 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to='/new-dish' className="nav-link">
-                  Add |
+                <NavLink to='/new-post' className="nav-link">
+                  Add 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to='/' className="nav-link">
-                  About |
+                <NavLink to='/about' className="nav-link">
+                  About 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to='/new-dish' className="nav-link">
+                <NavLink to='/contacts' className="nav-link">
                   Contacts
                 </NavLink>
               </li>
