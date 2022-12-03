@@ -6,6 +6,7 @@ import About from './container/About/About';
 import Add from './container/Add/Add';
 import Contacts from './container/Contacts/Contacts';
 import Home from './container/Home/Home';
+import ReadMore from './container/ReadMore/ReadMore';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <Add/>
         )}/>
         <Route path='/posts/:id' element={(
-          
+          <ReadMore/>
         )}/>
         <Route path='/about' element={(
           <About/>

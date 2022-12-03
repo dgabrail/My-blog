@@ -10,6 +10,7 @@ const Home = () => {
     const postsList: PostType[] = []
     const postsKey = Object.keys(request.data).map(key => {
       const post: PostRequest = request.data[key]
+      post.postType.id = key
       postsList.push(post.postType)
     })
     setPosts(postsList)
@@ -21,8 +22,8 @@ const Home = () => {
 
   return (
     <div>
-      {posts?.map(post => (
-        <Post body={post.body} title={post.title} />
+      {posts?.map((post , index) => (
+        <Post body={post.body} title={post.title} id={post.id}/>
       ))}
       
     </div>

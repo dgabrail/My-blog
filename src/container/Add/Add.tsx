@@ -9,6 +9,7 @@ const Add = () => {
     body: '',
     data: '',
     title: '',
+    id: '',
   })
 
   const change = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,7 +30,7 @@ const Add = () => {
     navigate('/')
   };
   return (
-    <div>
+    <div style={{marginLeft: '20px'}}>
       <form style={{ textAlign: 'left' }} onSubmit={onFormSubmit}>
         <div className="form-group">
           <label htmlFor="User-name">User name</label>
