@@ -23,6 +23,9 @@ function App() {
         <Route path='/new-post' element={(
           <Add/>
         )}/>
+        <Route path='/posts/:id' element={(
+          
+        )}/>
         <Route path='/about' element={(
           <About/>
         )}/>
