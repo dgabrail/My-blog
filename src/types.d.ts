@@ -8,7 +8,3 @@ export interface PostType {
 export interface PostRequest {
   postType: PostType;
 }
-
-export interface PostsList {
-  [id: string]: PostType
-}

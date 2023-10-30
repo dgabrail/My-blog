@@ -1,33 +1,31 @@
-import React, { ReactHTMLElement, useEffect, useState } from 'react'
-import axiosApi from '../../AxiosApi'
-import Post from '../../components/Post/Post'
-import { PostRequest, PostsList, PostType } from '../../types'
+import React, { useEffect, useState } from 'react';
+import axiosApi from '../../axiosApi';
+import Post from '../../components/Post/Post';
+import { PostType } from '../../types';
 
 const Home = () => {
-  const [posts, setPosts] = useState<PostType[] | null>(null)
+  const [posts, setPosts] = useState<PostType[]>([])
   const requestPosts = async () => {
-    const request = await axiosApi.get('/posts.json')
-    const postsList: PostType[] = []
-    const postsKey = Object.keys(request.data).map(key => {
-      const post: PostRequest = request.data[key]
-      post.postType.id = key
-      postsList.push(post.postType)
-    })
-    setPosts(postsList)
-  }
+    const responsePosts = await (await axiosApi.get('/posts.json')).data;
+    for (let postId in responsePosts) {
+      const post: PostType = await (await axiosApi.get('/posts/' + postId + '/postType.json')).data;
+      post.id = postId;
+      setPosts(prev => [...prev, post]);
+    }
+  };
+
 
   useEffect(() => {
-    requestPosts()
-  } , [])
+    requestPosts();
+  }, []);
 
   return (
     <div>
-      {posts?.map((post , index) => (
-        <Post body={post.body} title={post.title} id={post.id}/>
+      {posts.map((post, index) => (
+        <Post key={index} data={post.data} body={post.body} id={post.id} title={post.title} />
       ))}
-      
     </div>
   )
 }
 
-export default Home
+export default Home;

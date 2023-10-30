@@ -1,0 +1,15 @@
+.View-post div{
+  margin: auto;
+  width: 50%;
+  height: 40px;
+  margin-top: 10px;
+  border: 1px solid black;
+}
+
+.View-post span{
+  color: rgb(10, 255, 10);
+}
+
+.View-post button{
+  margin: 10px;
+}

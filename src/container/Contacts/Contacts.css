@@ -1,0 +1,15 @@
+.Contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Contacts img {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+.Contacts button {
+  background: none;
+  border: none;
+}

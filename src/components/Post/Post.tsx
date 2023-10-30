@@ -1,18 +1,17 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { json } from 'stream/consumers';
 interface Props {
   title: string;
   body: string;
-  id: string
+  id: string;
+  data: string;
 }
 
-const Post: React.FC<Props> = ({ body, title , id}) => {
-  const data = JSON.stringify(Math.floor(Math.random() * 30 + 1))
+const Post: React.FC<Props> = ({ body, title, id, data }) => {
   return (
     <div style={{ border: '1px solid black', margin: '30px', textAlign: 'left' }}>
       <div style={{ margin: '10px' }}>
-        <span>{data + ' ' + data + ' ' + 2022}</span>
+        <span>{data}</span>
         <h4>{title}</h4>
         <div>
           <p>{body}</p>
@@ -23,4 +22,4 @@ const Post: React.FC<Props> = ({ body, title , id}) => {
   )
 }
 
-export default Post
+export default Post;
