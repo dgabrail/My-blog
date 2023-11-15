@@ -15,7 +15,7 @@ function App() {
         <Navbar />
       </header>
       <Routes>
-        <Route path='/' element={(
+        <Route path='/My-blog' element={(
           <Home />
         )} />
         <Route path='/new-post' element={(
