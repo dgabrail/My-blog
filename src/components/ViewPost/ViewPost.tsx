@@ -27,7 +27,7 @@ const ViewPost = () => {
   value();
   const deletePost = async () => {
     await axiosApi.delete('posts/' + params.id + '.json');
-    navigate('/');
+    navigate('/My-blog');
   };
 
   return (
