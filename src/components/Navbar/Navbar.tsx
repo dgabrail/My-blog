@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div className="container-fluid">
+      <div className="navbar navbar-expand navbar-dark bg-primary">
+        <div style={{justifyContent:'space-between' , flexWrap:'wrap'}} className="container-fluid">
           <span className="navbar-brand">My blog</span>
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav mr-auto">
